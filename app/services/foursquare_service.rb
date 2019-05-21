@@ -13,31 +13,20 @@ class FoursquareService
 
   def friends(token)
     resp = Faraday.get("https://api.foursquare.com/v2/users/self/friends") do |req|
-      req.params['oath_token'] = token
+      req.params['oauth_token'] = token
       req.params['v'] = '20160201'
     end
     JSON.parse(resp.body)["response"]["friends"]["items"]
   end
 
-  def coffee_shops(client_id, client_secret)
-    @resp = Faraday.get("https://api.foursquare.com/v2/venues/search") do |req|
+  def coffee_shops(client_id, client_secret, near, query)
+    resp = Faraday.get("https://api.foursquare.com/v2/venues/search") do |req|
       req.params['client_id'] = client_id
       req.params['client_secret'] = client_secret
       req.params['v'] = '20160201'
-      req.params['near'] = params[:zipcode]
-      req.params['query'] = 'coffee shop'
+      req.params['near'] = near
+      req.params['query'] = query
     end
-    body = JSON.parse(resp.body)
-
-    if @resp.success?
-      @venues = body["response"]["venues"]
-    else
-      @error = body["meta"]["errorDetail"]
-    end
-    render 'search'
-
-    rescue Faraday::TimeoutError
-      @error = "There was a timeout. Please try again."
-      render 'search'
+    JSON.parse(resp.body)["response"]["venues"]
   end
 end
