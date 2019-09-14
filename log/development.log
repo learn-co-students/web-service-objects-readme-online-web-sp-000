@@ -1638,3 +1638,57 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-15 17:33:28 -0500
+Started GET "/" for ::1 at 2019-09-14 17:56:55 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from call at /Users/barbarajohnson/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/rack-2.0.7/lib/rack/method_override.rb:22)
+Processing by SearchesController#search as HTML
+Redirected to https://foursquare.com/oauth2/authenticate?client_id=4BJ410XWCRRPFCOSJVH4BPXYQ3SBUT4XZPONXMQINLIFQH55&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth?code=U5H1CHXBGM1DT2J35TT2QNEEGJYGL5SK3413CQKLUBMW3NVD" for ::1 at 2019-09-14 17:57:13 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"U5H1CHXBGM1DT2J35TT2QNEEGJYGL5SK3413CQKLUBMW3NVD"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 272ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-14 17:57:13 -0500
+Processing by SearchesController#search as HTML
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 433ms (Views: 430.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-09-14 17:57:13 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-09-14 17:57:13 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-09-14 17:57:13 -0500
+Started POST "/search" for ::1 at 2019-09-14 17:57:22 -0500
+Processing by SearchesController#foursquare as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mu5jk76i9BTRcaCXNBH9OQO0yxnyGT3ONjPi+f/3rCY0HxroL3ucspCsJWUlBQZCvRHz4/9Ly9oye6S5/DsFXg==", "zipcode"=>"78749", "commit"=>"Search!"}
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 436ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for ::1 at 2019-09-14 18:02:29 -0500
+Processing by SearchesController#friends as HTML
+  Rendering searches/friends.html.erb within layouts/application
+  Rendered searches/friends.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3344ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for ::1 at 2019-09-14 18:03:25 -0500
+Processing by SearchesController#friends as HTML
+  Rendering searches/friends.html.erb within layouts/application
+  Rendered searches/friends.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 286ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-14 18:12:09 -0500
+Processing by SearchesController#search as HTML
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
