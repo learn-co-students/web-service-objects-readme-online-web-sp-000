@@ -1638,3 +1638,53 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-15 17:33:28 -0500
+
+
+Started GET "/" for ::1 at 2019-01-29 12:54:21 -0800
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 439ms (Views: 429.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2019-01-29 12:54:25 -0800
+Processing by SearchesController#foursquare as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gOLCvR8bTnwb8VpTHbjFCn9gN6yH5v1dH1WwHZmFPR19QqbzGoPQatTq0CZ9YEwS/0kl6tdLgsqFaPRkEupkPA==", "zipcode"=>"98125", "commit"=>"Search!"}
+  Rendered searches/search.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 504ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tips" for ::1 at 2019-01-29 12:54:33 -0800
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CUZTZ+df1hnfgt8OtxBij+2G0BP94KZHQj+Qqt58vzz05jcp4sdIDxCZVXvXyOuXba/CVa1N2dDYAtTTVRPmHQ==", "venue_id"=>"5358023f498e1f43b1af86a1", "tip"=>"sample tip", "commit"=>"Add Tip"}
+Redirected to http://localhost:3000/tips
+Completed 302 Found in 602ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tips" for ::1 at 2019-01-29 12:54:34 -0800
+Processing by TipsController#index as HTML
+  Rendered tips/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 312ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-01-29 12:57:08 -0800
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for ::1 at 2019-01-29 12:57:13 -0800
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for ::1 at 2019-01-29 13:06:40 -0800
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for ::1 at 2019-01-29 13:06:45 -0800
+Processing by SearchesController#friends as HTML
+  Rendered searches/friends.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 289ms (Views: 15.6ms | ActiveRecord: 0.0ms)
